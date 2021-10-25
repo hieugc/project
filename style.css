@@ -1,0 +1,380 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-------------------------------------------Navagation-------------------------------------------*/
+.nav{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    background-color: #1F2E35;
+    flex-wrap: wrap;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.nav .logo{
+    flex: 25%;
+    text-indent: 10px;
+}
+.nav .boss{
+    flex: 40%;
+    font-size: 30px;
+    text-align: center;
+}
+.nav .signout{
+    flex: 20%;
+    text-align: right;
+    padding-right: 10px;
+    cursor: pointer;
+    color: #02897A;
+}
+.nav .signout:hover{
+    text-decoration: underline #1F2E35;
+    font-size: 22px;
+}
+/*-------------------------------------------Main content-------------------------------------------*/
+.main{
+    padding: 30px 5px 0px 5px;
+    /*background-color: #22343D;*/
+    background-color: white;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.main .function{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 40px;
+    width: 70%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+.main .function .revenue{
+    flex: 20%;
+    max-width: 200px;
+    cursor: pointer;
+    background-color: #02897A;
+    padding-top: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 8px #004941;
+}
+.main .function .revenue:hover, .revenue:active{
+    border-bottom: 2px solid #004941;
+    background-color: #32cab8;
+}
+.main .function .menu{
+    flex: 20%;
+    max-width: 200px;
+    cursor: pointer;
+    background-color: #02897A;
+    padding-top: 5px;
+    border-radius: 3px;
+    margin-left: 3px;
+    box-shadow: 1px 1px 8px #004941;
+}
+.main .function .menu:hover, .menu:active{
+    border-bottom: 2px solid #004941;
+    background-color: #32cab8;
+}
+/*-------------------------------------------begin board-------------------------------------------*/
+.main .contain-revenue{
+    /*border: 1px solid white;*/
+    border: 1px solid rgba(37, 37, 37, 0.753);
+    box-shadow: 1px 1px 5px black;
+}
+/*-------------------------------------------Title-------------------------------------------------*/
+.main .contain-revenue .title{
+    text-align: center;
+    /*background-color: #22343D;*/
+    padding-top: 10px;
+    align-items: center;
+    /*color: white;*/
+    color: black;
+}
+.main .contain-revenue .title h3{
+    display: inline-block;
+    margin: 5px;
+}
+/*------------------------------------------- Table -------------------------------------------*/
+.main .contain-revenue .table{
+    max-height: 800px;
+    min-height: 500px;
+    /*background-color: #22343D;*/
+    /*color: white;*/
+    color: black;
+}
+.main .contain-revenue .table .name-table{
+    display: flex;
+}
+.main .contain-revenue .table .name-table div{
+    flex: 20%;
+    text-align: center;
+    border: 1px solid rgba(19, 18, 18, 0.6);
+    font-size: 20px;
+}
+.main .contain-revenue .table .value-table{
+    overflow-y: auto;
+    min-height: 431px;
+    max-height: 731px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.main .contain-revenue .table .value-table::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+.main .contain-revenue .table .value-table .value{
+    display: flex;
+}
+.main .contain-revenue .table .value-table .value div{
+    flex: 20%;
+    height: 20px;
+    text-align: center;
+    border: 1px solid rgba(19, 18, 18, 0.3);
+    /*color: white;*/
+    font-size: 16px;
+}
+.main .contain-revenue .table .total-value{
+    display: flex;
+    /*background-color: #162227;*/
+    height: 40px;
+    border: 1px solid rgba(19, 18, 18, 0.3);
+}
+.main .contain-revenue .table .total-value > div{
+    flex: 20%;
+    margin: auto 2px;
+    font-size: 13px;
+    display: flex;
+}
+.main .contain-revenue .table .total-value > div .label{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.main .contain-revenue .table .total-value > div .value{
+    margin-left: 10px;
+}
+/*-------------------------------------------button for choosing-----------------------------------*/
+.main .contain-revenue .table .revenue-view{
+    margin: 5px 10px;
+}
+.main .contain-revenue .table .revenue-view div{
+    float: right;
+    padding: 5px;
+    margin: 3px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: 1px 1px black;
+    cursor: pointer;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+.main .contain-revenue .table .revenue-view div:hover{
+    background-color: rgb(20, 140, 145);
+}
+/*-------------------------------------------input form-------------------------------------------*/
+.main .contain-revenue .input-form{
+    background-color: rgba(255, 255, 255, 0.479);
+    max-width: 1000px;
+}
+/*-------------------------------------------input date-------------------------------------------*/
+.main .contain-revenue .input-form .input-date{
+    padding: 3px;
+    /*border: 3px solid rgba(48, 47, 47, 0.801);*/
+    /*background-color: #22343D;*/
+    display: none;
+}
+.main .contain-revenue .input-form form{
+    /*background-color: #22343D;*/
+    font-size: 18px;
+}
+.main .contain-revenue .input-form .input-date form fieldset legend{
+    /*color: white;*/
+}
+.main .contain-revenue .input-form .input-date form fieldset .contain{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .contain-revenue .input-form .input-date form fieldset .contain div{
+    flex: 100%;
+    display: flex;
+    padding: 3px;
+}
+.main .contain-revenue .input-form .input-date form fieldset .contain div .w30{
+    flex: 27%;
+}
+.main .contain-revenue .input-form .input-date form fieldset .contain div .w70{
+    flex: 73%;
+    height: 26px;
+    font-size: 12px;
+}
+.main .contain-revenue .input-form .input-date form fieldset .contain div .w70 input{
+    min-width: 200px;
+}
+.main .contain-revenue .input-form .input-date form fieldset .confirm{
+    display: block;
+    align-items: center;
+}
+.main .contain-revenue .input-form .input-date form fieldset .confirm input{
+    display: block;
+    cursor: pointer;
+    width: 120px;
+    padding: 10px;
+    box-shadow: 1px 1px #0e362a;
+    background-color: cornflowerblue;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.main .contain-revenue .input-form .input-date form fieldset .confirm input:hover{
+    background-color: #075f55;
+}
+/*-------------------------------------------input note-------------------------------------------*/
+.main .contain-revenue .input-form .note{
+    margin-top: 6px;
+    padding: 3px;
+    border: 3px solid rgba(48, 47, 47, 0.801);
+    /*background-color: #22343D;*/
+    /*color: white;*/
+    display: none;
+}
+.main .contain-revenue .input-form .note .form{
+    margin: 5px;
+    font-size: 18px;
+}
+.main .contain-revenue .input-form .note .form .contain{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .contain-revenue .input-form .note .form .contain div{
+    flex: 50%;
+    display: flex;
+    margin-bottom: 3px;
+    font-size: 18px;
+    height: 30px;
+}
+.main .contain-revenue .input-form .note .form .contain div .w30{
+    flex: 27%;
+}
+.main .contain-revenue .input-form .note .form .contain div .w70{
+    flex: 73%;
+}
+.main .contain-revenue .input-form .note .form .contain div .w70 input[type = "date"]{
+    padding-right: 1px;
+}
+.main .contain-revenue .input-form .note .form .contain div .w70 input{
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.main .contain-revenue .input-form .note .form textarea{
+    max-width: 98%;
+    min-width: 98%;
+    min-height: 150px;
+    max-height: 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.main .contain-revenue .input-form .note .form textarea:active{
+    background-color: white;
+}
+.main .contain-revenue .input-form .note .confirm{
+    text-align: center;
+}
+.main .contain-revenue .input-form .note .confirm div{
+    width: 100px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+.main .contain-revenue .input-form .note .confirm div:hover{
+    background-color: rgb(20, 140, 145);
+}
+
+/*-------------------------------------------Button-------------------------------------------*/
+.main .contain-revenue .button{
+    height: 60px;
+    width: 100%;
+    background-color: #1F2E35;
+    display: flex;
+    position: relative;
+    bottom: 0;
+}
+.main .contain-revenue .button div{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #02897A;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+.main .contain-revenue .button div:hover{
+    background-color: #1cceb9;
+    color: black;
+}
+.clean{
+    clear: both;
+}
+
+
+
+@media  only screen and (min-width: 470px){
+    .nav .signout:hover{
+        font-size: 26px;
+    }
+}
+@media  only screen and (min-width: 600px){
+    .main .contain-revenue .input-form .input-date form fieldset .contain div .w70 input{
+        min-width: 250px;
+    }
+
+    .main .contain-revenue .input-form .note .form .contain div .w70 input{
+        min-width: 250px;
+    }
+}
+@media  only screen and (min-width: 700px){
+    .main .contain-revenue .input-form .input-date form fieldset .contain{
+        flex-wrap: nowrap;
+    }
+    .main .contain-revenue .input-form .input-date form fieldset .contain div{
+        flex: 50%;
+    }
+    .main .contain-revenue .input-form .input-date form fieldset .contain div .w30{
+        flex: none;
+    }
+    .main .contain-revenue .input-form .input-date form fieldset .contain div .w70{
+        flex: none;
+        margin-left: 10px;
+    }
+    .main .contain-revenue .input-form .input-date form fieldset .contain div .w70 input{
+        min-width: 180px;
+    }
+
+    .main .contain-revenue .input-form .note .form .contain{
+        flex-wrap: nowrap;
+    }
+    .main .contain-revenue .input-form .note .form .contain div{
+        flex: 50%;
+    }
+    .main .contain-revenue .input-form .note .form .contain div .w30{
+        flex: none;
+    }
+    .main .contain-revenue .input-form .note .form .contain div .w70{
+        flex: none;
+        margin-left: 10px;
+    }
+    .main .contain-revenue .input-form .note .form .contain div .w70 input{
+        min-width: 180px;
+    }
+}
+@media  only screen and (min-width: 800px){
+    .main .contain-revenue .input-form .input-date form fieldset .contain div .w70 input{
+        min-width: 220px;
+    }
+
+    .main .contain-revenue .input-form .note .form .contain div .w70 input{
+        min-width: 220px;
+    }
+}
