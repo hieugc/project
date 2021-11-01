@@ -1,30 +1,51 @@
-document.getElementById("revenue").addEventListener("click", click_revenue);
-document.getElementById("input-date").style.display = "none";
-document.getElementById("fee").addEventListener("click", click_fee);
-document.getElementById("note").style.display = "none";
+function Drawline(width = 500, height = 500){
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
 
-function click_revenue(){
-    element_date = document.getElementById("input-date");
-    element_note = document.getElementById("note");
-    if(element_date.style.display == "none")
-    {
-        if(element_note.style.display == "block")
-            element_note.style.display = "none";
-        element_date.style.display = "block";
+    function drawChart(width, height) {
+        var data = google.visualization.arrayToDataTable([
+            ['Tuần', 'Doanh số', 'Chi phí'],
+            ['1',  1500000,      400000],
+            ['2',  1170000,      46000],
+            ['3',  660000,       112000],
+            ['4',  1030000,      54000]
+        ]);
+
+        var options = {
+            width: width,
+            height: height
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('myCanvas'));
+
+        chart.draw(data, options);
     }
-    else
-        element_date.style.display = "none";
 }
 
-function click_fee(){
-    element_date = document.getElementById("input-date");
-    element_note = document.getElementById("note");
-    if(element_note.style.display == "none")
-    {
-        if(element_date.style.display == "block")
-            element_date.style.display = "none";
-        element_note.style.display = "block";
+function click_title(element, element2){
+    if(screen.width <= 950){
+        if(element.value.value == 0){
+            element.value.style.display = "block";
+            element.value.value = 1;
+            if(element2.value.value == 1){
+                element2.value.style.display = "none";
+                element2.value.value = 0;
+            }
+        }
+        else if(element.value.value == 1){
+            element.value.style.display = "none";
+            element.value.value = 0;
+        }
     }
-    else
-        element_note.style.display = "none";
+    else{
+        console.log("else");
+    }
 }
+var form = document.querySelectorAll("form");
+var title_click = document.querySelectorAll("h4");
+for(var i = 0, len = form.length; i < len; i++){
+    title_click[i].value = form[i];
+    form[i].value = 0;
+}
+title_click[0].addEventListener("click", function(){click_title(title_click[0],title_click[1]);});
+title_click[1].addEventListener("click", function(){click_title(title_click[1],title_click[0]);});
